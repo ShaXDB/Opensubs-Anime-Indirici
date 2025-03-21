@@ -10,7 +10,7 @@ Bu uygulama, [Nyaa.si](https://nyaa.si/) sitesindeki animeleri arayıp, WebTorre
 
 ## Kurulum
 
-1. [Buraya tıklayarak en son sürümü indirin](https://github.com/username/repository-name/releases).
+1. [Buraya tıklayarak en son sürümü indirin](https://github.com/ShaXDB/Opensubs-Anime-Indirici/releases/tag/1.2.5).
 2. İndirilen `.exe` dosyasını çalıştırarak uygulamayı kurun.
 
 ### Sistem Gereksinimleri
