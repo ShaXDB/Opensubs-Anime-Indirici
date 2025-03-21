@@ -1,0 +1,57 @@
+{
+  "name": "opensubs-nyaa-downloader",
+  "version": "1.2.5",
+  "description": "OpenSubs Nyaa.si Anime Downloader",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable",
+    "postinstall": "npm audit fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^11.3.0",
+    "node-fetch": "^2.6.1",
+    "webtorrent": "^2.1.27"
+  },
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.opensubs.nyaadownloader",
+    "productName": "OpenSubs Nyaa.si Downloader",
+    "copyright": "Copyright © 2025",
+    "win": {
+      "icon": "./build/icon.ico",
+      "target": [
+        "portable"
+      ],
+      "artifactName": "${productName}-${version}.${ext}"
+    },
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "asar": true
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "resolutions": {
+    "simple-get": "^4.0.1",
+    "ip": "^2.0.0",
+    "bittorrent-dht": "^11.0.5",
+    "boolean": "^3.2.0"
+  },
+  "overrides": {
+    "minimist": "^1.2.6",
+    "debug": "^4.3.4",
+    "ms": "^2.1.3",
+    "simple-get": "^4.0.1"
+  }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Opensubs Anime İndirici</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+       
+        <div class="titlebar">
+            <div class="titlebar-title">
+                <img src="icon.ico" alt="Logo" class="titlebar-logo">
+                <span>Opensubs Anime İndirici</span>
+            </div>
+            <div class="titlebar-buttons">
+                <button id="minimize" class="titlebar-button">
+                    <span class="material-icons">remove</span>
+                </button>
+                <button id="maximize" class="titlebar-button">
+                    <span class="material-icons">crop_square</span>
+                </button>
+                <button id="close" class="titlebar-button">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+        </div>
+
+      
+        <div class="container">
+           
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    MENÜ
+                </div>
+                
+                <div class="nav-item active" data-page="info">
+                    <span class="material-icons">info</span>
+                    <span>Bilgilendirme</span>
+                </div>
+                
+                <div class="nav-item" data-page="search">
+                    <span class="material-icons">search</span>
+                    <span>Arama</span>
+                </div>
+                
+                <div class="nav-item" data-page="downloads">
+                    <span class="material-icons">download</span>
+                    <span>İndirilenler</span>
+                </div>
+                
+                <div class="sidebar-footer">
+                    v1.0.0
+                </div>
+            </div>
+
+            <div class="content">
+                <div id="info" class="page active">
+                    <div class="info-container">
+                        <h2>Nasıl Kullanılır?</h2>
+                        
+                        <div class="info-section">
+                            <h3>1. Anime Arama</h3>
+                            <p>- Arama kutusuna anime adını yazın</p>
+                            <p>- Kategoriler arasından seçim yapabilirsiniz</p>
+                            <p>- Filtreleme ve sıralama seçeneklerini kullanarak sonuçları düzenleyebilirsiniz</p>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>2. İndirme</h3>
+                            <p>- Arama sonuçlarından istediğiniz animeyi seçin</p>
+                            <p>- "İndir" butonuna tıklayın</p>
+                            <p>- İndirme konumunu seçin</p>
+                            <p>- İndirme otomatik olarak başlayacaktır</p>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>3. İndirme Yönetimi</h3>
+                            <p>- İndirilenler sekmesinden tüm indirmelerinizi görebilirsiniz</p>
+                            <p>- İndirmeleri duraklatabilir, devam ettirebilir veya iptal edebilirsiniz</p>
+                            <p>- İndirme tamamlandığında bildirim alacaksınız</p>
+                            <p>- Dosya konumuna tıklayarak indirilen klasörü açabilirsiniz</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="search" class="page">
+                    <div class="search-container">
+                  
+                        <div class="search-box-container">
+                            <div class="search-box">
+                                <input type="text" id="search-input" placeholder="Anime ara...">
+                                <button id="search-button" class="search-button">
+                                    <span class="material-icons">search</span>
+                                </button>
+                            </div>
+                        </div>
+
+                 
+                        <div class="filters-container">
+                            <div class="filter-group">
+                                <div class="filter-item">
+                                    <span class="material-icons">category</span>
+                                    <select id="category-filter" class="filter-select">
+                                        <option value="0_0">Tüm Kategoriler</option>
+                                        <option value="1_0">Anime</option>
+                                        <option value="1_1">- Anime Müzik Video</option>
+                                        <option value="1_2">- İngilizce Çevirilmiş</option>
+                                        <option value="1_3">- İngilizce Çevirilmemiş</option>
+                                        <option value="1_4">- Ham (Raw)</option>
+                                        <option value="2_0">Ses</option>
+                                        <option value="2_1">- Kayıpsız (Lossless)</option>
+                                        <option value="2_2">- Kayıplı (Lossy)</option>
+                                        <option value="3_0">Edebiyat</option>
+                                        <option value="3_1">- İngilizce Çevirilmiş</option>
+                                        <option value="3_2">- İngilizce Çevirilmemiş</option>
+                                        <option value="3_3">- Ham (Raw)</option>
+                                        <option value="4_0">Canlı çekim (Live Action)</option>
+                                        <option value="4_1">- İngilizce Çevirilmiş</option>
+                                        <option value="4_2">- İdol/Tanıtım Videosu</option>
+                                        <option value="4_3">- İngilizce Çevirilmemiş</option>
+                                        <option value="4_4">- Ham (Raw)</option>
+                                        <option value="5_0">Resimler</option>
+                                        <option value="5_1">- Grafik</option>
+                                        <option value="5_2">- Fotoğraflar</option>
+                                        <option value="6_0">Yazılım</option>
+                                        <option value="6_1">- Uygulamalar</option>
+                                        <option value="6_2">- Oyunlar</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <span class="material-icons">filter_list</span>
+                                    <select id="filter-type" class="filter-select">
+                                        <option value="0">Filtresiz</option>
+                                        <option value="1">Yeniden yapım olmayan</option>
+                                        <option value="2">Yalnızca Güvenilir</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <span class="material-icons">sort</span>
+                                    <select id="sort-by" class="filter-select">
+                                        <option value="none">Sıralama</option>
+                                        <option value="date">En Yeni</option>
+                                        <option value="seeders">En Çok Seeder</option>
+                                        <option value="name">İsme Göre (A-Z)</option>
+                                        <option value="size">En Büyük Boyut</option>
+                                        <option value="downloaded">En Çok İndirilen</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                      
+                        <div id="results"></div>
+                    </div>
+                </div>
+
+            <div id="downloads" class="page">
+                    <div class="downloads-list">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
